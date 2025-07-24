@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="radialSlider.js"></script>
+    <style>
+    body {
+        border: 1px solid #ddd;
+        margin: 5px;
+        overflow: hidden;
+        width: 90vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* //// */
+
+	.wrap {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 200px;
+		aspect-ratio: 1;
+		& > div {
+			position: absolute;
+			&:nth-child(1) {width: 100%; top: 0px;}
+			&:nth-child(2) {width: 50%; top: 50px;}
+		}
+	}
+
+    </style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div id="rs1"></div>
+		<div id="rs2"></div>
+	</div>
+</body>
+<script>
+	원형슬라이더("#rs1", {color: "green", max: 100, value: 30})
+	원형슬라이더("#rs2", {color: "blue", max: 100, size: 20})
+</script>
+</html>
